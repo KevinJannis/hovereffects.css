@@ -16,21 +16,23 @@
   position: relative;
   color: rgba(0, 0, 0, 0.5);
   line-height: 1em;
+  backface-visibility: hidden;
 }
 .effect:before, .effect:after {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
-  -webkit-transform-origin: center center 50%;
-  -moz-transform-origin: center center 50%;
-  -ms-transform-origin: center center 50%;
-  -o-transform-origin: center center 50%;
-  transform-origin: center center 50%;
+  -webkit-transform-origin: center center 0 50%;
+  -moz-transform-origin: center center 0 50%;
+  -ms-transform-origin: center center 0 50%;
+  -o-transform-origin: center center 0 50%;
+  transform-origin: center center 0 50%;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
   position: absolute;
   content: attr(data-effect);
+  backface-visibility: hidden;
   top: 0;
   left: 0;
   color: rgba(255, 255, 255, 0.9);
@@ -126,42 +128,18 @@
   margin-left: 0;
 }
 
-.effect.twirl-left {
-  color: transparent;
-}
-.effect.twirl-left:before, .effect.twirl-left:after {
-  -webkit-transform-origin: center top 50%;
-  -moz-transform-origin: center top 50%;
-  -ms-transform-origin: center top 50%;
-  -o-transform-origin: center top 50%;
-  transform-origin: center top 50%;
-}
-.effect.twirl-left:before {
-  -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  -moz-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  -ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  -o-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
-  color: rgba(0, 0, 0, 0.5);
-}
 .effect.twirl-left:after {
+  -webkit-transform-origin: center center 50%;
+  -moz-transform-origin: center center 50%;
+  -ms-transform-origin: center center 50%;
+  -o-transform-origin: center center 50%;
+  transform-origin: center center 50%;
   -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(180deg);
   -moz-transform: rotateX(0deg) rotateY(0deg) rotateZ(180deg);
   -ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(180deg);
   -o-transform: rotateX(0deg) rotateY(0deg) rotateZ(180deg);
   transform: rotateX(0deg) rotateY(0deg) rotateZ(180deg);
   color: rgba(255, 255, 255, 0.9);
-}
-.effect.twirl-left:hover:before {
-  -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(-180deg);
-  -moz-transform: rotateX(0deg) rotateY(0deg) rotateZ(-180deg);
-  -ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(-180deg);
-  -o-transform: rotateX(0deg) rotateY(0deg) rotateZ(-180deg);
-  transform: rotateX(0deg) rotateY(0deg) rotateZ(-180deg);
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
 }
 .effect.twirl-left:hover:after {
   -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
@@ -172,42 +150,18 @@
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-.effect.twirl-right {
-  color: transparent;
-}
-.effect.twirl-right:before, .effect.twirl-right:after {
-  -webkit-transform-origin: center top 50%;
-  -moz-transform-origin: center top 50%;
-  -ms-transform-origin: center top 50%;
-  -o-transform-origin: center top 50%;
-  transform-origin: center top 50%;
-}
-.effect.twirl-right:before {
-  -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  -moz-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  -ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  -o-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
-  color: rgba(0, 0, 0, 0.5);
-}
 .effect.twirl-right:after {
+  -webkit-transform-origin: center center 50%;
+  -moz-transform-origin: center center 50%;
+  -ms-transform-origin: center center 50%;
+  -o-transform-origin: center center 50%;
+  transform-origin: center center 50%;
   -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(-180deg);
   -moz-transform: rotateX(0deg) rotateY(0deg) rotateZ(-180deg);
   -ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(-180deg);
   -o-transform: rotateX(0deg) rotateY(0deg) rotateZ(-180deg);
   transform: rotateX(0deg) rotateY(0deg) rotateZ(-180deg);
   color: rgba(255, 255, 255, 0.9);
-}
-.effect.twirl-right:hover:before {
-  -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(180deg);
-  -moz-transform: rotateX(0deg) rotateY(0deg) rotateZ(180deg);
-  -ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(180deg);
-  -o-transform: rotateX(0deg) rotateY(0deg) rotateZ(180deg);
-  transform: rotateX(0deg) rotateY(0deg) rotateZ(180deg);
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
 }
 .effect.twirl-right:hover:after {
   -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
@@ -384,4 +338,63 @@
   opacity: 1;
   height: 120%;
   z-index: 0;
+}
+
+.effect.zoom-in {
+  color: transparent;
+}
+.effect.zoom-in:before {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  color: rgba(0, 0, 0, 0.5);
+}
+.effect.zoom-in:after {
+  -webkit-transform: scale(0, 0);
+  -moz-transform: scale(0, 0);
+  -ms-transform: scale(0, 0);
+  -o-transform: scale(0, 0);
+  transform: scale(0, 0);
+  color: rgba(255, 255, 255, 0.9);
+}
+.effect.zoom-in:hover:before {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+.effect.zoom-in:hover:after {
+  -webkit-transform: scale(1, 1);
+  -moz-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -o-transform: scale(1, 1);
+  transform: scale(1, 1);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+.effect.zoom-out {
+  color: transparent;
+}
+.effect.zoom-out:before {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  color: rgba(0, 0, 0, 0.5);
+}
+.effect.zoom-out:after {
+  -webkit-transform: scale(1.25, 1.25);
+  -moz-transform: scale(1.25, 1.25);
+  -ms-transform: scale(1.25, 1.25);
+  -o-transform: scale(1.25, 1.25);
+  transform: scale(1.25, 1.25);
+  color: rgba(255, 255, 255, 0.9);
+}
+.effect.zoom-out:hover:before {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+.effect.zoom-out:hover:after {
+  -webkit-transform: scale(1, 1);
+  -moz-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -o-transform: scale(1, 1);
+  transform: scale(1, 1);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
 }

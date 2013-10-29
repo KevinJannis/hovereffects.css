@@ -14,13 +14,15 @@ $transition-transform-cubic-heavy: all .2s ease-out, transform .2s cubic-bezier(
 
   color: $normal;
   line-height: 1em;
+  backface-visibility: hidden;
   
   &:before, &:after {
     @include opacity(0);
-    @include transform-origin(center center);
+    @include transform-origin(center center 0);
     @include transition($transition-normal);
     position:absolute;
     content: attr(data-effect);
+    backface-visibility: hidden;
 
     top: 0;
     left: 0;
@@ -34,3 +36,4 @@ $transition-transform-cubic-heavy: all .2s ease-out, transform .2s cubic-bezier(
 @import "twirl";
 @import "pulse";
 @import "background";
+@import "zoom";
