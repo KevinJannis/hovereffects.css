@@ -285,3 +285,103 @@
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
+
+.effect.background-center {
+  color: transparent;
+}
+.effect.background-center:before {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.effect.background-center:after {
+  background: rgba(255, 255, 255, 0.9);
+  color: transparent;
+  top: -10%;
+  left: 50%;
+  width: 0%;
+  height: 120%;
+  overflow: hidden;
+}
+.effect.background-center:hover:after {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  left: -10%;
+  width: 120%;
+  z-index: 0;
+}
+.effect.background-left {
+  color: transparent;
+}
+.effect.background-left:before {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.effect.background-left:after {
+  background: rgba(255, 255, 255, 0.9);
+  color: transparent;
+  top: -10%;
+  left: -10%;
+  width: 0%;
+  height: 120%;
+  overflow: hidden;
+}
+.effect.background-left:hover:after {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  width: 120%;
+  z-index: 0;
+}
+.effect.background-right {
+  color: transparent;
+}
+.effect.background-right:before {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.effect.background-right:after {
+  background: rgba(255, 255, 255, 0.9);
+  color: transparent;
+  top: -10%;
+  right: -10%;
+  left: auto;
+  width: 0%;
+  height: 120%;
+  overflow: hidden;
+}
+.effect.background-right:hover:after {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  width: 120%;
+  z-index: 0;
+}
+.effect.background-bottom {
+  color: transparent;
+}
+.effect.background-bottom:before {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.effect.background-bottom:after {
+  background: rgba(255, 255, 255, 0.9);
+  color: transparent;
+  top: auto;
+  bottom: -10%;
+  left: -10%;
+  width: 120%;
+  height: 0%;
+  overflow: hidden;
+}
+.effect.background-bottom:hover:after {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  height: 120%;
+  z-index: 0;
+}
