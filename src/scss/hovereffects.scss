@@ -2,9 +2,12 @@
 
 $normal: rgba(0, 0, 0, .5);
 $hover: rgba(255, 255, 255, .9);
+$transition-normal: all .2s ease-out;
+$transition-transform-cubic-normal: all .2s ease-out, transform .2s cubic-bezier(.1, 1.5, .21, 1);
+$transition-transform-cubic-heavy: all .2s ease-out, transform .2s cubic-bezier(.1, 2.2, .21, 1);
 
 .effect {
-  @include transition((all .2s ease-out, opacity .2s ease-out, margin .2s ease-out));
+  @include transition($transition-normal);
   @include perspective(400);
   @include transform-style(preserve-3d);
   position: relative;
@@ -15,7 +18,7 @@ $hover: rgba(255, 255, 255, .9);
   &:before, &:after {
     @include opacity(0);
     @include transform-origin(center center);
-    @include transition((all .2s ease-out, opacity .2s ease-out, margin .2s ease-out));
+    @include transition($transition-normal);
     position:absolute;
     content: attr(data-effect);
 
@@ -29,3 +32,4 @@ $hover: rgba(255, 255, 255, .9);
 
 @import "slide";
 @import "twirl";
+@import "pulse";

@@ -1,0 +1,53 @@
+.effect {
+  &.pulse-normal {
+    color: transparent;
+
+    &:before {
+      @include opacity(1);
+      color: $normal;
+    }
+
+    &:after {
+      @include transition($transition-transform-cubic-normal);
+      @include scale(.1);
+      color: $hover;
+    }
+
+    &:hover {
+      &:before {
+        @include opacity(0);
+      }
+
+      &:after {
+        @include scale(1);
+        @include opacity(1);
+      }
+    }
+  }
+
+  &.pulse-heavy {
+    color: transparent;
+
+    &:before {
+      @include opacity(1);
+      color: $normal;
+    }
+
+    &:after {
+      @include transition($transition-transform-cubic-heavy);
+      @include scale(.1);
+      color: $hover;
+    }
+
+    &:hover {
+      &:before {
+        @include opacity(0);
+      }
+
+      &:after {
+        @include scale(1);
+        @include opacity(1);
+      }
+    }
+  }
+}
