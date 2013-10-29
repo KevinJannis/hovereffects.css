@@ -1,0 +1,29 @@
+@import "compass/css3";
+
+$normal: rgba(0, 0, 0, .5);
+$hover: rgba(255, 255, 255, .9);
+
+.effect {
+  @include perspective(400);
+  @include transform-style(preserve-3d);
+  position: relative;
+
+  color: $normal;
+  line-height: 1em;
+
+  &:before, &:after {
+    @include opacity(0);
+    @include transform-origin(center center);
+    position:absolute;
+    content: attr(data-effect);
+
+    top: 0;
+    left: 0;
+
+    color: $hover;
+    color: rgba(255, 255, 255, .9);
+  }
+}
+
+@import "slide";
+@import "roll";

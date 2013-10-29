@@ -1,0 +1,143 @@
+.effect {
+  -webkit-perspective: 400;
+  -moz-perspective: 400;
+  -ms-perspective: 400;
+  -o-perspective: 400;
+  perspective: 400;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  position: relative;
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 1em;
+}
+.effect:before, .effect:after {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transform-origin: center center 50%;
+  -moz-transform-origin: center center 50%;
+  -ms-transform-origin: center center 50%;
+  -o-transform-origin: center center 50%;
+  transform-origin: center center 50%;
+  position: absolute;
+  content: attr(data-effect);
+  top: 0;
+  left: 0;
+  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.effect.slide-up {
+  color: transparent;
+}
+.effect.slide-up:before, .effect.slide-up:after {
+  -webkit-transition: opacity 0.2s ease-out, margin 0.2s ease-out;
+  -moz-transition: opacity 0.2s ease-out, margin 0.2s ease-out;
+  -o-transition: opacity 0.2s ease-out, margin 0.2s ease-out;
+  transition: opacity 0.2s ease-out, margin 0.2s ease-out;
+}
+.effect.slide-up:before {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  color: rgba(0, 0, 0, 0.5);
+}
+.effect.slide-up:after {
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 1em;
+}
+.effect.slide-up:hover:before {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  margin-top: -1em;
+}
+.effect.slide-up:hover:after {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  margin-top: 0;
+}
+.effect.slide-down {
+  color: transparent;
+}
+.effect.slide-down:before, .effect.slide-down:after {
+  -webkit-transition: opacity 0.2s ease-out, margin 0.2s ease-out;
+  -moz-transition: opacity 0.2s ease-out, margin 0.2s ease-out;
+  -o-transition: opacity 0.2s ease-out, margin 0.2s ease-out;
+  transition: opacity 0.2s ease-out, margin 0.2s ease-out;
+}
+.effect.slide-down:before {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  color: rgba(0, 0, 0, 0.5);
+}
+.effect.slide-down:after {
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: -1em;
+}
+.effect.slide-down:hover:before {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  margin-top: 1em;
+}
+.effect.slide-down:hover:after {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  margin-top: 0;
+}
+.effect.slide-left {
+  color: transparent;
+}
+.effect.slide-left:before, .effect.slide-left:after {
+  -webkit-transition: opacity 0.2s ease-out, margin 0.2s ease-out;
+  -moz-transition: opacity 0.2s ease-out, margin 0.2s ease-out;
+  -o-transition: opacity 0.2s ease-out, margin 0.2s ease-out;
+  transition: opacity 0.2s ease-out, margin 0.2s ease-out;
+}
+.effect.slide-left:before {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  color: rgba(0, 0, 0, 0.5);
+}
+.effect.slide-left:after {
+  color: rgba(255, 255, 255, 0.9);
+  margin-left: -1em;
+}
+.effect.slide-left:hover:before {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  margin-left: 1em;
+}
+.effect.slide-left:hover:after {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  margin-left: 0;
+}
+.effect.slide-right {
+  color: transparent;
+}
+.effect.slide-right:before, .effect.slide-right:after {
+  -webkit-transition: opacity 0.2s ease-out, margin 0.2s ease-out;
+  -moz-transition: opacity 0.2s ease-out, margin 0.2s ease-out;
+  -o-transition: opacity 0.2s ease-out, margin 0.2s ease-out;
+  transition: opacity 0.2s ease-out, margin 0.2s ease-out;
+}
+.effect.slide-right:before {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  color: rgba(0, 0, 0, 0.5);
+}
+.effect.slide-right:after {
+  color: rgba(255, 255, 255, 0.9);
+  margin-left: 1em;
+}
+.effect.slide-right:hover:before {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  margin-left: -1em;
+}
+.effect.slide-right:hover:after {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  margin-left: 0;
+}
