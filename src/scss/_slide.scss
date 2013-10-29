@@ -2,10 +2,6 @@
   &.slide-up {
     color: transparent;
 
-    &:before, &:after {
-      @include transition((opacity .2s ease-out, margin .2s ease-out));
-    }
-
     &:before {
       @include opacity(1);
       color: $normal;
@@ -31,10 +27,6 @@
 
   &.slide-down {
     color: transparent;
-
-    &:before, &:after {
-      @include transition((opacity .2s ease-out, margin .2s ease-out));
-    }
 
     &:before {
       @include opacity(1);
@@ -62,10 +54,6 @@
   &.slide-left {
     color: transparent;
 
-    &:before, &:after {
-      @include transition((opacity .2s ease-out, margin .2s ease-out));
-    }
-
     &:before {
       @include opacity(1);
       color: $normal;
@@ -91,10 +79,6 @@
 
   &.slide-right {
     color: transparent;
-
-    &:before, &:after {
-      @include transition((opacity .2s ease-out, margin .2s ease-out));
-    }
 
     &:before {
       @include opacity(1);

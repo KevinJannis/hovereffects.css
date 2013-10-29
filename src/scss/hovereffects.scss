@@ -4,16 +4,18 @@ $normal: rgba(0, 0, 0, .5);
 $hover: rgba(255, 255, 255, .9);
 
 .effect {
+  @include transition((all .2s ease-out, opacity .2s ease-out, margin .2s ease-out));
   @include perspective(400);
   @include transform-style(preserve-3d);
   position: relative;
 
   color: $normal;
   line-height: 1em;
-
+  
   &:before, &:after {
     @include opacity(0);
     @include transform-origin(center center);
+    @include transition((all .2s ease-out, opacity .2s ease-out, margin .2s ease-out));
     position:absolute;
     content: attr(data-effect);
 
@@ -26,4 +28,4 @@ $hover: rgba(255, 255, 255, .9);
 }
 
 @import "slide";
-@import "roll";
+@import "twirl";

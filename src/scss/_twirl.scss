@@ -1,0 +1,63 @@
+.effect {
+  &.twirl-left {
+    color: transparent;
+
+    &:before, &:after {
+      @include transform-origin(center top);
+    }
+
+    &:before {
+      @include transform(rotateX(0deg) rotateY(0deg) rotateZ(0deg));
+      @include opacity(1);
+      color: $normal;
+    }
+
+    &:after {
+      @include transform(rotateX(0deg) rotateY(0deg) rotateZ(180deg));
+      color: $hover;
+    }
+
+    &:hover {
+      &:before {
+        @include transform(rotateX(0deg) rotateY(0deg) rotateZ(-180deg));
+        @include opacity(0);
+      }
+
+      &:after {
+        @include transform(rotateX(0deg) rotateY(0deg) rotateZ(0deg));
+        @include opacity(1);
+      }
+    }
+  }
+
+  &.twirl-right {
+    color: transparent;
+
+    &:before, &:after {
+      @include transform-origin(center top);
+    }
+
+    &:before {
+      @include transform(rotateX(0deg) rotateY(0deg) rotateZ(0deg));
+      @include opacity(1);
+      color: $normal;
+    }
+
+    &:after {
+      @include transform(rotateX(0deg) rotateY(0deg) rotateZ(-180deg));
+      color: $hover;
+    }
+
+    &:hover {
+      &:before {
+        @include transform(rotateX(0deg) rotateY(0deg) rotateZ(180deg));
+        @include opacity(0);
+      }
+
+      &:after {
+        @include transform(rotateX(0deg) rotateY(0deg) rotateZ(0deg));
+        @include opacity(1);
+      }
+    }
+  }
+}
