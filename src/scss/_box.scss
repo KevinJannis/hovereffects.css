@@ -113,6 +113,41 @@
     }
   }
 
+  &.box-fill-twirl {
+    border: solid 2px $normal;
+    padding: 6px 10px;
+    overflow: hidden;
+    color: transparent;
+
+    &:before, &:after {
+      @include opacity(1);
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      color: $normal;
+      padding: 6px 0px;
+      text-align: center;
+    }
+
+    &:after {
+      @include transform(scale(0) rotateX(0deg) rotateY(0deg) rotateZ(-180deg));
+      background: $normal;
+      z-index: 10;
+      color: $hover;
+    }
+
+    &:hover {
+      &:before {
+        color: transparent;
+      }
+
+      &:after {
+        @include transform(scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg));
+      }
+    }
+  }
+
   &.box-slide-left {
     border: solid 2px $normal;
     padding: 6px 10px;

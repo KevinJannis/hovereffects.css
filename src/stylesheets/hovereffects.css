@@ -510,6 +510,43 @@
   margin-left: -50%;
   width: 100%;
 }
+.effect.box-fill-twirl {
+  border: solid 2px rgba(0, 0, 0, 0.5);
+  padding: 6px 10px;
+  overflow: hidden;
+  color: transparent;
+}
+.effect.box-fill-twirl:before, .effect.box-fill-twirl:after {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: rgba(0, 0, 0, 0.5);
+  padding: 6px 0px;
+  text-align: center;
+}
+.effect.box-fill-twirl:after {
+  -webkit-transform: scale(0) rotateX(0deg) rotateY(0deg) rotateZ(-180deg);
+  -moz-transform: scale(0) rotateX(0deg) rotateY(0deg) rotateZ(-180deg);
+  -ms-transform: scale(0) rotateX(0deg) rotateY(0deg) rotateZ(-180deg);
+  -o-transform: scale(0) rotateX(0deg) rotateY(0deg) rotateZ(-180deg);
+  transform: scale(0) rotateX(0deg) rotateY(0deg) rotateZ(-180deg);
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  color: rgba(255, 255, 255, 0.9);
+}
+.effect.box-fill-twirl:hover:before {
+  color: transparent;
+}
+.effect.box-fill-twirl:hover:after {
+  -webkit-transform: scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -moz-transform: scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -ms-transform: scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -o-transform: scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  transform: scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
 .effect.box-slide-left {
   border: solid 2px rgba(0, 0, 0, 0.5);
   padding: 6px 10px;
