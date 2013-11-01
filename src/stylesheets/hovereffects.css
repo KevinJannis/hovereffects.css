@@ -566,7 +566,7 @@
 }
 .effect.box-slide-left:after {
   background: rgba(0, 0, 0, 0.5);
-  left: 100%;
+  left: -100%;
   z-index: 10;
   color: rgba(255, 255, 255, 0.9);
 }
@@ -595,7 +595,7 @@
 }
 .effect.box-slide-right:after {
   background: rgba(0, 0, 0, 0.5);
-  left: -100%;
+  left: 100%;
   z-index: 10;
   color: rgba(255, 255, 255, 0.9);
 }

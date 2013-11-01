@@ -7,6 +7,12 @@
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Oxygen:700" />
   </head>
   <body>
+    <div id="intro">
+      <div class="container">
+        <p>hover effects</p>
+        <span>and counting..</span>
+      </div>
+    </div>
     <div class="part color-1">
       <div class="container">
         <p>Slide up</p>
@@ -242,5 +248,15 @@
         <a class="effect box-slide-up" href="#" data-effect="Contact">Contact</a>
       </div>
     </div>
+    <script>
+      var intro = document.getElementById('intro');
+      var text = intro.getElementsByTagName('p')[0];
+      var count = document.getElementsByClassName('part').length;
+      text.innerHTML = count + ' ' + text.innerHTML;
+
+      var padding = ((window.outerHeight - intro.clientHeight) / 2) + 'px';
+      intro.style.paddingTop = padding;
+      intro.style.paddingBottom = padding;
+    </script>
   </body>
 </html>

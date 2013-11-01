@@ -167,7 +167,7 @@
 
     &:after {
       background: $normal;
-      left: 100%;
+      left: -100%;
       z-index: 10;
       color: $hover;
     }
@@ -202,7 +202,7 @@
 
     &:after {
       background: $normal;
-      left: -100%;
+      left: 100%;
       z-index: 10;
       color: $hover;
     }
