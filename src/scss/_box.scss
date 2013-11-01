@@ -112,4 +112,109 @@
       }
     }
   }
+
+  &.box-slide-left {
+    border: solid 2px $normal;
+    padding: 6px 10px;
+    overflow: hidden;
+    color: transparent;
+
+    &:before, &:after {
+      @include opacity(1);
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      color: $normal;
+      padding: 6px 0px;
+      text-align: center;
+    }
+
+    &:after {
+      background: $normal;
+      left: 100%;
+      z-index: 10;
+      color: $hover;
+    }
+
+    &:hover {
+      &:before {
+        color: transparent;
+      }
+
+      &:after {
+        left: 0%;
+      }
+    }
+  }
+
+  &.box-slide-right {
+    border: solid 2px $normal;
+    padding: 6px 10px;
+    overflow: hidden;
+    color: transparent;
+
+    &:before, &:after {
+      @include opacity(1);
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      color: $normal;
+      padding: 6px 0px;
+      text-align: center;
+    }
+
+    &:after {
+      background: $normal;
+      left: -100%;
+      z-index: 10;
+      color: $hover;
+    }
+
+    &:hover {
+      &:before {
+        color: transparent;
+      }
+
+      &:after {
+        left: 0%;
+      }
+    }
+  }
+
+  &.box-slide-up {
+    border: solid 2px $normal;
+    padding: 6px 10px;
+    overflow: hidden;
+    color: transparent;
+
+    &:before, &:after {
+      @include opacity(1);
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      color: $normal;
+      padding: 6px 0px;
+      text-align: center;
+    }
+
+    &:after {
+      background: $normal;
+      top: 100%;
+      z-index: 10;
+      color: $hover;
+    }
+
+    &:hover {
+      &:before {
+        color: transparent;
+      }
+
+      &:after {
+        top: 0%;
+      }
+    }
+  }
 }
