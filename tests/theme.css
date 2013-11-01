@@ -17,23 +17,43 @@
 }
 
 .part, .part.color-1 { 
-  background: #59b0af;
+  background: #74cccb;
 }
 
 .part.color-2 {
-  background: #cd611f;
+  background: #edfc41;
 }
 
 .part.color-3 {
-  background: #61cd1f;
+  background: #6ad627;
 }
 
 .part.color-4 {
-  background: #b94bc3;
+  background: #ff902a;
 }
 
 .part.color-5 {
-  background: pink;
+  background: #d3586d;
+}
+
+.part.color-6 {
+  background: #8babfd;
+}
+
+.part.color-7 {
+  background: #41fc7d;
+}
+
+.part.color-8 {
+  background: #cb43f7;
+}
+
+.part.color-9 {
+  background: #d34b4b;
+}
+
+.part.color-10 {
+  background: #dbb4b4;
 }
 
 .part .container {
