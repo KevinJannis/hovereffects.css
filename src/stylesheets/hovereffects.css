@@ -173,73 +173,6 @@
   opacity: 1;
 }
 
-.effect.pulse-normal {
-  color: transparent;
-}
-.effect.pulse-normal:before {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
-  color: rgba(0, 0, 0, 0.5);
-}
-.effect.pulse-normal:after {
-  -webkit-transition: all 0.2s ease-out, -webkit-transform 0.2s cubic-bezier(0.1, 1.5, 0.21, 1);
-  -moz-transition: all 0.2s ease-out, -moz-transform 0.2s cubic-bezier(0.1, 1.5, 0.21, 1);
-  -o-transition: all 0.2s ease-out, -o-transform 0.2s cubic-bezier(0.1, 1.5, 0.21, 1);
-  transition: all 0.2s ease-out, transform 0.2s cubic-bezier(0.1, 1.5, 0.21, 1);
-  -webkit-transform: scale(0.1, 0.1);
-  -moz-transform: scale(0.1, 0.1);
-  -ms-transform: scale(0.1, 0.1);
-  -o-transform: scale(0.1, 0.1);
-  transform: scale(0.1, 0.1);
-  color: rgba(255, 255, 255, 0.9);
-}
-.effect.pulse-normal:hover:before {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-}
-.effect.pulse-normal:hover:after {
-  -webkit-transform: scale(1, 1);
-  -moz-transform: scale(1, 1);
-  -ms-transform: scale(1, 1);
-  -o-transform: scale(1, 1);
-  transform: scale(1, 1);
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
-}
-.effect.pulse-heavy {
-  color: transparent;
-}
-.effect.pulse-heavy:before {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
-  color: rgba(0, 0, 0, 0.5);
-}
-.effect.pulse-heavy:after {
-  -webkit-transition: all 0.2s ease-out, -webkit-transform 0.2s cubic-bezier(0.1, 2.2, 0.21, 1);
-  -moz-transition: all 0.2s ease-out, -moz-transform 0.2s cubic-bezier(0.1, 2.2, 0.21, 1);
-  -o-transition: all 0.2s ease-out, -o-transform 0.2s cubic-bezier(0.1, 2.2, 0.21, 1);
-  transition: all 0.2s ease-out, transform 0.2s cubic-bezier(0.1, 2.2, 0.21, 1);
-  -webkit-transform: scale(0.1, 0.1);
-  -moz-transform: scale(0.1, 0.1);
-  -ms-transform: scale(0.1, 0.1);
-  -o-transform: scale(0.1, 0.1);
-  transform: scale(0.1, 0.1);
-  color: rgba(255, 255, 255, 0.9);
-}
-.effect.pulse-heavy:hover:before {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-}
-.effect.pulse-heavy:hover:after {
-  -webkit-transform: scale(1, 1);
-  -moz-transform: scale(1, 1);
-  -ms-transform: scale(1, 1);
-  -o-transform: scale(1, 1);
-  transform: scale(1, 1);
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
-}
-
 .effect.background-center {
   color: transparent;
 }
@@ -399,11 +332,33 @@
   opacity: 1;
 }
 
+.effect.box-open {
+  border: solid 2px transparent;
+  padding: 6px 10px;
+}
+.effect.box-open:after {
+  -webkit-transform: scale(0, 0);
+  -moz-transform: scale(0, 0);
+  -ms-transform: scale(0, 0);
+  -o-transform: scale(0, 0);
+  transform: scale(0, 0);
+  border: solid 2px rgba(0, 0, 0, 0.5);
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  color: transparent;
+}
+.effect.box-open:hover:after {
+  -webkit-transform: scale(1, 1);
+  -moz-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -o-transform: scale(1, 1);
+  transform: scale(1, 1);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
 .effect.box-fill {
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
   -webkit-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.5);
   -moz-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.5);
   box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.5);

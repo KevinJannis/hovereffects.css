@@ -17,8 +17,9 @@
 }
 
 #intro {
+  padding: 200px 10px;
   color: white;
-  background: #aaaaaa;
+  background: #544a5a;
 }
 
 #intro span {
