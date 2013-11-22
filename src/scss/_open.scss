@@ -1,0 +1,39 @@
+.effect {
+  &.open-left {
+    color: $normal;
+
+    &:after {
+      color: $hover;
+
+      width: 0%;
+
+      overflow: hidden;
+    }
+
+    &:hover {
+      &:after {
+        @include opacity(1);
+
+        width: 100%;
+      }
+    }
+  }
+
+  &.open-top {
+    color: $normal;
+
+    &:after {
+      color: $hover;
+      height: 0%;
+
+      overflow: hidden;
+    }
+
+    &:hover {
+      &:after {
+        @include opacity(1);
+        height: 100%;
+      }
+    }
+  }
+}

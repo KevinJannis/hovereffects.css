@@ -1,0 +1,51 @@
+.effect {
+  &.zoom-in {
+    color: transparent;
+
+    &:before {
+      @include opacity(1);
+      color: $normal;
+    }
+
+    &:after {
+      @include scale(0);
+      color: $hover;
+    }
+
+    &:hover {
+      &:before {
+        @include opacity(0);
+      }
+
+      &:after {
+        @include scale(1);
+        @include opacity(1);
+      }
+    }
+  }
+
+  &.zoom-out {
+    color: transparent;
+
+    &:before {
+      @include opacity(1);
+      color: $normal;
+    }
+
+    &:after {
+      @include scale(1.25);
+      color: $hover;
+    }
+
+    &:hover {
+      &:before {
+        @include opacity(0);
+      }
+
+      &:after {
+        @include scale(1);
+        @include opacity(1);
+      }
+    }
+  }
+}

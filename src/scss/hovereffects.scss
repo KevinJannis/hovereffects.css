@@ -1,0 +1,38 @@
+@import "compass/css3";
+
+$normal: rgba(0, 0, 0, .5);
+$hover: rgba(255, 255, 255, .9);
+$transition-normal: all .2s ease-out;
+
+.effect {
+  @include transition($transition-normal);
+  @include perspective(400);
+  @include transform-style(preserve-3d);
+  position: relative;
+
+  color: $normal;
+  line-height: 1em;
+  backface-visibility: hidden;
+
+  &:before, &:after {
+    @include opacity(0);
+    @include transform-origin(center center 0);
+    @include transition($transition-normal);
+    position:absolute;
+    content: attr(data-effect);
+    backface-visibility: hidden;
+
+    top: 0;
+    left: 0;
+
+    color: $hover;
+    color: rgba(255, 255, 255, .9);
+  }
+}
+
+@import "slide";
+@import "twirl";
+@import "open";
+@import "zoom";
+@import "background";
+@import "box";

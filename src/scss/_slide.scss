@@ -1,0 +1,105 @@
+.effect {
+  &.slide-up {
+    color: transparent;
+
+    &:before {
+      @include opacity(1);
+      color: $normal;
+    }
+
+    &:after {
+      color: $hover;
+      margin-top: 1em;
+    }
+
+    &:hover {
+      &:before {
+        @include opacity(0);
+        margin-top: -1em;
+      }
+
+      &:after {
+        @include opacity(1);
+        margin-top: 0;
+      }
+    }
+  }
+
+  &.slide-down {
+    color: transparent;
+
+    &:before {
+      @include opacity(1);
+      color: $normal;
+    }
+
+    &:after {
+      color: $hover;
+      margin-top: -1em;
+    }
+
+    &:hover {
+      &:before {
+        @include opacity(0);
+        margin-top: 1em;
+      }
+
+      &:after {
+        @include opacity(1);
+        margin-top: 0;
+      }
+    }
+  }
+
+  &.slide-left {
+    color: transparent;
+
+    &:before {
+      @include opacity(1);
+      color: $normal;
+    }
+
+    &:after {
+      color: $hover;
+      margin-left: -1em;
+    }
+
+    &:hover {
+      &:before {
+        @include opacity(0);
+        margin-left: 1em;
+      }
+
+      &:after {
+        @include opacity(1);
+        margin-left: 0;
+      }
+    }
+  }
+
+  &.slide-right {
+    color: transparent;
+
+    &:before {
+      @include opacity(1);
+      color: $normal;
+    }
+
+    &:after {
+      color: $hover;
+      margin-left: 1em;
+    }
+
+    &:hover {
+      &:before {
+        @include opacity(0);
+        margin-left: -1em;
+      }
+
+      &:after {
+        @include opacity(1);
+        margin-left: 0;
+      }
+    }
+  }
+}

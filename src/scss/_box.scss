@@ -1,0 +1,310 @@
+.effect {
+  &.box-open {
+    border: solid 2px transparent;
+    padding: 6px 10px;
+
+    &:after {
+      @include scale(0);
+      border: solid 2px $normal;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      color: transparent;
+    }
+
+    &:hover {
+      &:after {
+        @include scale(1);
+        @include opacity(1);
+      }
+    }
+  }
+
+  &.box-fill {
+    @include box-shadow(inset 0 0 0 0 $normal);
+    border: solid 2px $normal;
+    padding: 6px 10px;
+
+    &:hover {
+      @include box-shadow(inset 0 0 1px 20px $normal);
+      color: $hover;
+    }
+  }
+
+  &.box-open-twirl {
+    border: solid 2px transparent;
+    padding: 6px 10px;
+
+    &:after {
+      @include transform-origin(center center 0);
+      @include transform(scale(0) rotate(-180deg));
+      border: solid 2px $normal;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      color: transparent;
+    }
+
+    &:hover {
+      &:after {
+        @include transform(scale(1) rotate(0deg));
+        @include opacity(1);
+      }
+    }
+  }
+
+  &.box-fill {
+    @include box-shadow(inset 0 0 0 0 $normal);
+    border: solid 2px $normal;
+    padding: 6px 10px;
+
+    &:hover {
+      @include box-shadow(inset 0 0 1px 20px $normal);
+      color: $hover;
+    }
+  }
+
+  &.box-fill-left {
+    border: solid 2px $normal;
+    padding: 6px 10px;
+
+    &:after {
+      @include opacity(1);
+      top: 0;
+      left: 0;
+      right: 100%;
+      bottom: 0;
+      color: transparent;
+      background: $normal;
+      z-index: -1;
+    }
+
+    &:hover {
+      color: $hover;
+
+      &:after {
+        right: 0;
+      }
+    }
+  }
+
+  &.box-fill-right {
+    border: solid 2px $normal;
+    padding: 6px 10px;
+
+    &:after {
+      @include opacity(1);
+      top: 0;
+      left: 100%;
+      right: 0;
+      bottom: 0;
+      color: transparent;
+      background: $normal;
+      z-index: -1;
+    }
+
+    &:hover {
+      color: $hover;
+
+      &:after {
+        left: 0;
+      }
+    }
+  }
+
+  &.box-fill-center {
+    border: solid 2px $normal;
+    padding: 6px 10px;
+
+    &:after {
+      @include opacity(1);
+      top: 0;
+      left: 50%;
+      margin-left: 0%;
+      bottom: 0;
+      width: 0%;
+      color: transparent;
+      background: $normal;
+      z-index: -1;
+    }
+
+    &:hover {
+      color: $hover;
+
+      &:after {
+        margin-left: -50%;
+        width: 100%;
+      }
+    }
+  }
+
+  &.box-fill-skew {
+    border: solid 2px $normal;
+    padding: 6px 10px;
+    overflow: hidden;
+
+    &:after {
+      @include skewX(45deg);
+      @include opacity(1);
+      top: 0;
+      left: 50%;
+      margin-left: 0%;
+      bottom: 0;
+      width: 0%;
+      color: transparent;
+      background: $normal;
+      z-index: -1;
+    }
+
+    &:hover {
+      color: $hover;
+
+      &:after {
+        margin-left: -50%;
+        width: 100%;
+      }
+    }
+  }
+
+  &.box-fill-twirl {
+    border: solid 2px $normal;
+    padding: 6px 10px;
+    overflow: hidden;
+    color: transparent;
+
+    &:before, &:after {
+      @include opacity(1);
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      color: $normal;
+      padding: 6px 0px;
+      text-align: center;
+    }
+
+    &:after {
+      @include transform(scale(0) rotateX(0deg) rotateY(0deg) rotateZ(-180deg));
+      background: $normal;
+      z-index: 10;
+      color: $hover;
+    }
+
+    &:hover {
+      &:before {
+        color: transparent;
+      }
+
+      &:after {
+        @include transform(scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg));
+      }
+    }
+  }
+
+  &.box-slide-left {
+    border: solid 2px $normal;
+    padding: 6px 10px;
+    overflow: hidden;
+    color: transparent;
+
+    &:before, &:after {
+      @include opacity(1);
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      color: $normal;
+      padding: 6px 0px;
+      text-align: center;
+    }
+
+    &:after {
+      background: $normal;
+      left: -100%;
+      z-index: 10;
+      color: $hover;
+    }
+
+    &:hover {
+      &:before {
+        color: transparent;
+      }
+
+      &:after {
+        left: 0%;
+      }
+    }
+  }
+
+  &.box-slide-right {
+    border: solid 2px $normal;
+    padding: 6px 10px;
+    overflow: hidden;
+    color: transparent;
+
+    &:before, &:after {
+      @include opacity(1);
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      color: $normal;
+      padding: 6px 0px;
+      text-align: center;
+    }
+
+    &:after {
+      background: $normal;
+      left: 100%;
+      z-index: 10;
+      color: $hover;
+    }
+
+    &:hover {
+      &:before {
+        color: transparent;
+      }
+
+      &:after {
+        left: 0%;
+      }
+    }
+  }
+
+  &.box-slide-up {
+    border: solid 2px $normal;
+    padding: 6px 10px;
+    overflow: hidden;
+    color: transparent;
+
+    &:before, &:after {
+      @include opacity(1);
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      color: $normal;
+      padding: 6px 0px;
+      text-align: center;
+    }
+
+    &:after {
+      background: $normal;
+      top: 100%;
+      z-index: 10;
+      color: $hover;
+    }
+
+    &:hover {
+      &:before {
+        color: transparent;
+      }
+
+      &:after {
+        top: 0%;
+      }
+    }
+  }
+}
