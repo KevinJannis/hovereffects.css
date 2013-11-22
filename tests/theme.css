@@ -28,7 +28,7 @@
   margin-top: -30px;
 }
 
-.part, .color-1 {
+.color-1 {
   background: #435a6b;
 }
 
@@ -48,8 +48,12 @@
   background: #af4154;
 }
 
-.color-6 {
+.part, .color-6 {
   background: #7984a2;
+}
+
+.part:nth-child(2n) {
+  background: #aaaeb9;
 }
 
 .color-7 {
