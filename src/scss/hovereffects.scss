@@ -13,7 +13,7 @@ $transition-normal: all .2s ease-out;
   color: $normal;
   line-height: 1em;
   backface-visibility: hidden;
-  
+
   &:before, &:after {
     @include opacity(0);
     @include transform-origin(center center 0);
@@ -32,6 +32,7 @@ $transition-normal: all .2s ease-out;
 
 @import "slide";
 @import "twirl";
-@import "background";
+@import "open";
 @import "zoom";
+@import "background";
 @import "box";
