@@ -28,44 +28,44 @@
   margin-top: -30px;
 }
 
-.part, .color-1 { 
-  background: #74cccb;
+.part, .color-1 {
+  background: #435a6b;
 }
 
 .color-2 {
-  background: #edfc41;
+  background: #698b5c;
 }
 
 .color-3 {
-  background: #6ad627;
+  background: #cfb64f;
 }
 
 .color-4 {
-  background: #ff902a;
+  background: #d5853d;
 }
 
 .color-5 {
-  background: #d3586d;
+  background: #af4154;
 }
 
 .color-6 {
-  background: #8babfd;
+  background: #7984a2;
 }
 
 .color-7 {
-  background: #41fc7d;
+  background: #65a77a;
 }
 
 .color-8 {
-  background: #cb43f7;
+  background: #795a83;
 }
 
 .color-9 {
-  background: #d34b4b;
+  background: #a35757;
 }
 
 .color-10 {
-  background: #dbb4b4;
+  background: #acac74;
 }
 
 .container {
@@ -79,7 +79,7 @@
   display: inline-block;
   text-decoration: none;
   font-size: 18px;
-} 
+}
 
 .container p {
   padding-bottom: 30px;
